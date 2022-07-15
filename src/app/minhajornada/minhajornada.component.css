@@ -1,14 +1,22 @@
 .container {
-  width: 400px;
+  width: 700px;
   max-width: 100%;
   margin: 0 20px;
   display: inline-block;
   vertical-align: top;
+  border: 15px solid purple;
+  margin: 50px solid black;
+}
+
+.mat-tab-body-content {
+  margin-top: 80px;
+  height: 100%;
+  overflow: auto;
 }
 
 .list-item {
   padding: 20px 10px;
-  border-bottom: solid 2px #8a2598;
+  border: solid 2px #8a2598;
   box-sizing: border-box;
   cursor: move;
   background: #ba68c8;
@@ -18,8 +26,8 @@
 .list-item:hover {
   
   cursor: move;
-  background: #44059d;
-  color: #000;
+  background: #6717c9a6;
+ 
   
 }
 

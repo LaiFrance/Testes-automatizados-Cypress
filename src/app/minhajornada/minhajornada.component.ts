@@ -23,7 +23,7 @@ export class MinhajornadaComponent {
 'Netflix'
   ];
 
-  doing =[
+  doin =[
     'Estudar Testes',
     'Ver o Gitlab',
     'Ajustar Tabelas',
