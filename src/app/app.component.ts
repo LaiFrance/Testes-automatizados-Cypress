@@ -9,8 +9,14 @@ import { Validators } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
   nome!: string;
   senha!: number;
+  cpf!: string;
+  cidade!: string;
+  estado!: string;
   formulario: FormGroup;
   constructor(private formBuilder: FormBuilder) {
     // **************************************************
