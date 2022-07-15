@@ -6,6 +6,23 @@
   vertical-align: top;
 }
 
+.list-item {
+  padding: 20px 10px;
+  border-bottom: solid 2px #8a2598;
+  box-sizing: border-box;
+  cursor: move;
+  background: #ba68c8;
+  color: #000;
+  font-size: 14px;
+}
+.list-item:hover {
+  
+  cursor: move;
+  background: #44059d;
+  color: #000;
+  
+}
+
 .list {
   border: solid 1px #ccc;
   min-height: 60px;
