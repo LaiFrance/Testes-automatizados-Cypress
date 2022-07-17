@@ -16,22 +16,22 @@ export interface TableItem {
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: TableItem[] = [
-  {id: 1, name: 'Laise' , cpf:"xxx.xxx.xxx-xx", cargo:"Front-end", cidade:"", estado:"" },
-  {id: 2, name: 'Samuel', cpf:"xxx.xxx.xxx-xx", cargo:"Front-end", cidade:"", estado:"" },
-  {id: 3, name: 'Igor', cpf:"xxx.xxx.xxx-xx", cargo:"Front-end", cidade:"", estado:"" },
-  {id: 4, name: 'Amanda', cpf:"xxx.xxx.xxx-xx", cargo:"Front-end", cidade:"", estado:"" },
-  {id: 5, name: 'Alberto', cpf:"xxx.xxx.xxx-xx", cargo:"Front-end", cidade:"", estado:"" },
-  {id: 6, name: 'Maria', cpf:"xxx.xxx.xxx-xx", cargo:"Front-end", cidade:"", estado:"" },
-  {id: 7, name: 'Aylla', cpf:"xxx.xxx.xxx-xx", cargo:"Front-end", cidade:"", estado:"" },
+  {id: 1, name: 'Laise' , cpf:"xxx.xxx.xxx-xx", cargo:"Front-end", cidade:"recife", estado:"Pernambuco" },
+  {id: 2, name: 'Samuel', cpf:"xxx.xxx.xxx-xx", cargo:"Front-end", cidade:"Betim", estado:"Minas Gerais" },
+  {id: 3, name: 'Igor', cpf:"xxx.xxx.xxx-xx", cargo:"Front-end", cidade:"", estado:"São Paulo" },
+  {id: 4, name: 'Amanda', cpf:"xxx.xxx.xxx-xx", cargo:"Front-end", cidade:"Olinda", estado:"Pernambuco" },
+  {id: 5, name: 'Alberto', cpf:"xxx.xxx.xxx-xx", cargo:"Front-end", cidade:"", estado:"Rio de Janeiro" },
+  {id: 6, name: 'Maria', cpf:"xxx.xxx.xxx-xx", cargo:"Front-end", cidade:"", estado:"Brasília" },
+  {id: 7, name: 'Aylla', cpf:"xxx.xxx.xxx-xx", cargo:"Front-end", cidade:"recife", estado:"Pernambuco" },
   {id: 8, name: 'Victor', cpf:"xxx.xxx.xxx-xx", cargo:"Front-end", cidade:"", estado:"" },
-  {id: 9, name: 'Danilo', cpf:"xxx.xxx.xxx-xx", cargo:"Front-end", cidade:"", estado:"" },
-  {id: 10, name: 'Kerly', cpf:"xxx.xxx.xxx-xx", cargo:"Front-end", cidade:"", estado:"" },
-  {id: 11, name: 'Paulinha', cpf:"xxx.xxx.xxx-xx", cargo:"Front-end", cidade:"", estado:"" },
-  {id: 12, name: 'Ewerson', cpf:"xxx.xxx.xxx-xx", cargo:"Front-end", cidade:"", estado:"" },
-  {id: 13, name: 'Rafa', cpf:"xxx.xxx.xxx-xx", cargo:"Front-end", cidade:"", estado:"" },
-  {id: 14, name: 'Lucas', cpf:"xxx.xxx.xxx-xx", cargo:"Front-end", cidade:"", estado:"" },
+  {id: 9, name: 'Danilo', cpf:"xxx.xxx.xxx-xx", cargo:"Front-end", cidade:"", estado:"Bahia" },
+  {id: 10, name: 'Kerly', cpf:"xxx.xxx.xxx-xx", cargo:"Front-end", cidade:"", estado:"Maranhão" },
+  {id: 11, name: 'Paulinha', cpf:"xxx.xxx.xxx-xx", cargo:"Front-end", cidade:"", estado:"Minas Gerais" },
+  {id: 12, name: 'Ewerson', cpf:"xxx.xxx.xxx-xx", cargo:"Front-end", cidade:"Patos", estado:"Paraíba" },
+  {id: 13, name: 'Rafa', cpf:"xxx.xxx.xxx-xx", cargo:"Front-end", cidade:"", estado:"Minas Gerais" },
+  {id: 14, name: 'Lucas', cpf:"xxx.xxx.xxx-xx", cargo:"Front-end", cidade:"", estado:"Bahia" },
   {id: 15, name: 'Breno', cpf:"xxx.xxx.xxx-xx", cargo:"Front-end", cidade:"", estado:"" },
-  {id: 16, name: 'Hugo', cpf:"xxx.xxx.xxx-xx", cargo:"Front-end", cidade:"", estado:"" },
+  {id: 16, name: 'Hugo', cpf:"xxx.xxx.xxx-xx", cargo:"Front-end", cidade:"", estado:"Pernambuco" },
   {id: 17, name: 'Karla', cpf:"xxx.xxx.xxx-xx", cargo:"Front-end", cidade:"", estado:"" },
   {id: 18, name: 'Igor', cpf:"xxx.xxx.xxx-xx", cargo:"Front-end", cidade:"", estado:"" },
   {id: 19, name: 'Hanna', cpf:"xxx.xxx.xxx-xx", cargo:"Front-end", cidade:"", estado:"" },
@@ -102,6 +102,8 @@ export class TableDataSource extends DataSource<TableItem> {
       const isAsc = this.sort?.direction === 'asc';
       switch (this.sort?.active) {
         case 'name': return compare(a.name, b.name, isAsc);
+        case 'cidade': return compare(a.cidade, b.cidade, isAsc);
+        case 'estado': return compare(a.estado, b.estado, isAsc);
         case 'id': return compare(+a.id, +b.id, isAsc);
         default: return 0;
       }
